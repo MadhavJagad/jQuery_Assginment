@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball1 {
+            height: 100px;
+            width: 100px;
+            background-color: coral;
+            border-radius: 50%;
+            position: absolute;
+        }
+        button{
+            padding: 10px 30px;
+            background-color: blueviolet;
+            color: white;
+            font-weight: 800;
+            border: 1px solid crimson;
+        }
+        button:hover{
+            background-color: transparent;
+            color: crimson;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <button id="btn">Click Here</button>
+    <br><br>
+        <div class="ball1"></div>
+
+    <script>
+        function moveBall() {
+            $(".ball1").animate({
+                "left": 400
+            }, 2000, function () {
+                $(".ball1").animate({
+                    "left": 0
+                },2000)
+            });
+        }
+        $("#btn").on("click", moveBall);
+    </script>
+</body>
+
+</html>
